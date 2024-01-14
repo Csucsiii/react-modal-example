@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import type { ModalOnSubmitFunction } from "../types/types";
 import { ModalCtx } from "./Context/ModelContext";
 import { useState } from "react";
-import Modal from "../Components/Modal";
 
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
 	const [modalState, setModalState] = useState<boolean>(false);
@@ -23,7 +22,6 @@ export const ModalProvider = ({ children }: { children: ReactNode }) => {
 				setDescription,
 			}}
 		>
-			<Modal />
 			{children}
 		</ModalCtx.Provider>
 	);

@@ -1,7 +1,9 @@
 import { useModalContext } from "../hooks/useModelContext";
+import { createPortal } from "react-dom";
 
 const Modal = () => {
-	const { modalState, setModalState, onSubmit, title, description, setOnSubmit, setTitle, setDescription } = useModalContext();
+	const { modalState, setModalState, onSubmit, title, description, setOnSubmit, setTitle, setDescription } =
+		useModalContext();
 
 	const onModalSubmitClick = () => {
 		if (onSubmit && typeof onSubmit === "function") {
@@ -11,9 +13,9 @@ const Modal = () => {
 			setDescription(undefined);
 		}
 		setModalState(false);
-	}
+	};
 
-	return (
+	return createPortal(
 		<div
 			className={`flex flex-col justify-start items-center absolute ${
 				modalState ? "top-[5%]" : "-top-full"
@@ -35,7 +37,8 @@ const Modal = () => {
 					Igen
 				</button>
 			</div>
-		</div>
+		</div>,
+		document.getElementById("modal")!
 	);
 };
 
