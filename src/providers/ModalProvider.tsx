@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import type { ModalOnSubmitFunction } from "../types/types";
-import { ModalCtx } from "./Context/ModelContext";
+import { ModalCtx } from "./Context/ModalContext";
 import { useState } from "react";
 
 export const ModalProvider = ({ children }: { children: ReactNode }) => {

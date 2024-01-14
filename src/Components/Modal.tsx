@@ -1,4 +1,4 @@
-import { useModalContext } from "../hooks/useModelContext";
+import { useModalContext } from "../hooks/useModalContext";
 import { createPortal } from "react-dom";
 
 const Modal = () => {

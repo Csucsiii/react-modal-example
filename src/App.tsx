@@ -1,4 +1,4 @@
-import { useModalContext } from "./hooks/useModelContext";
+import { useModalContext } from "./hooks/useModalContext";
 
 const App = () => {
 	const { setModalState, setOnSubmit, setTitle, setDescription } = useModalContext();
